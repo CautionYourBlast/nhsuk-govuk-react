@@ -1,5 +1,5 @@
 {
-  "name": "govuk-components",
+  "name": "@cautionyourblast/govuk-components",
   "version": "1.0.0",
   "description": "Transpiling nhsuk-react-components to govuk components",
   "main": "index.js",
