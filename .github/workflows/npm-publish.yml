@@ -18,21 +18,14 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 12
+          registry-url: https://npm.pkg.github.com/
       - name: Download latest .zip of nhsuk-react-components
         run: |
           sh ./get-src.sh
       - run: yarn install
       - run: yarn build
-
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 12
-          registry-url: https://npm.pkg.github.com/
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+
