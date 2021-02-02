@@ -1,0 +1,33 @@
+{
+  "name": "govuk-components",
+  "version": "1.0.0",
+  "description": "Transpiling nhsuk-react-components to govuk components",
+  "main": "index.js",
+  "repository": "https://github.com/CautionYourBlast/nhsuk-govuk-react.git",
+  "author": "jenbutongit <jen+git@cautionyourblast.com>",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "module": "lib/components/index.js",
+  "scripts": {
+    "build": "babel -x .tsx,.ts src --out-dir lib/components"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-syntax-jsx": "^7.12.1",
+    "@babel/plugin-transform-react-jsx": "^7.12.12",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "babel-plugin-search-and-replace": "^1.1.0",
+    "classnames": "^2.2.6",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "peerDependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
